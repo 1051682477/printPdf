@@ -1,0 +1,5 @@
+21-32-2022 09:32:41 root:ERROR:Exception occurred
+Traceback (most recent call last):
+  File "F:/untitled/print_1/test1221/logging.py", line 7, in <module>
+    c = a / b
+ZeroDivisionError: division by zero
