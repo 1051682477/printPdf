@@ -1,13 +1,24 @@
-import logging
+#!/usr/bin/python3
 
-logging.basicConfig(filename="test.log", filemode="w", format="%(asctime)s %(name)s:%(levelname)s:%(message)s", datefmt="%d-%M-%Y %H:%M:%S", level=logging.DEBUG)
-a = 5
-b = 0
+import _thread
+import time
+
+
+# 为线程定义一个函数
+def print_time(threadName, delay):
+    count = 0
+    while count < 5:
+        time.sleep(delay)
+        count += 1
+        print("%s: %s" % (threadName, time.ctime(time.time())))
+
+
+# 创建两个线程
 try:
-    c = a / b
-except Exception as e:
-    # 下面三种方式三选一，推荐使用第一种
-    logging.exception("Exception occurred")
-print('1121454')
-    # logging.error("Exception occurred", exc_info=True)
-    # logging.log(level=logging.DEBUG, msg="Exception occurred", exc_info=True)
+    _thread.start_new_thread(print_time, ("Thread-1", 2,))
+    _thread.start_new_thread(print_time, ("Thread-2", 4,))
+except:
+    print("Error: 无法启动线程")
+
+while 1:
+    pass

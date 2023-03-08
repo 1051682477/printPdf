@@ -61,9 +61,9 @@ if __name__ == "__main__":
     # # getFileNames(path)
     # print()
 
-    with open('./txt/99999999-2432232.txt', 'r') as  f:
-        for n in range(44):
-            print(f.readline().split('|')[5])
+    with open('./txt/99999999-2451233(1).txt', 'r') as  f:
+        for n in range(249):
+            print(f.readline().split('|')[11])
 
 
 

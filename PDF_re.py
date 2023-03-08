@@ -35,6 +35,7 @@ import os
 import PIL.Image as Image
 import time
 
+
 # 正式
 db = pymysql.connect(
     host='rm-m5e1lup6qd395y43wmo.mysql.rds.aliyuncs.com',

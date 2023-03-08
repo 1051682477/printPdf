@@ -29,11 +29,9 @@ def labor_redis_select():
 
 
 if __name__ == '__main__':
-    # 这是隔20分执行一次
+    # 这是隔10分执行一次
 
     while 1 == 1:
         labor_redis_select()
-        second = sleep_time(0, 5, 0)
+        second = sleep_time(0, 10, 0)
         time.sleep(second)
-
-
